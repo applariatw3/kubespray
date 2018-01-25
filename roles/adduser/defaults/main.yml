@@ -10,6 +10,7 @@ addusers:
     home: "{{ etcd_data_dir }}"
     system: yes
     shell: /bin/nologin
+    uid: 998
   kube:
     name: kube
     comment: "Kubernetes user"
@@ -17,6 +18,7 @@ addusers:
     system: yes
     group: "{{ kube_cert_group }}"
     createhome: no
+    uid: 999
 
 adduser:
   name: "{{ user.name }}"
@@ -25,3 +27,4 @@ adduser:
   shell: "{{ user.shell|default(None) }}"
   system: "{{ user.system|default(None) }}"
   createhome: "{{ user.createhome|default(None) }}"
+  uid: "{{ user.uid|default(None) }}"
