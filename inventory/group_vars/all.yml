@@ -51,8 +51,12 @@ bin_dir: /usr/local/bin
 
 ## Upstream dns servers used by dnsmasq
 #upstream_dns_servers:
+#  - 10.250.100.1
 #  - 8.8.8.8
 #  - 8.8.4.4
+
+#searchdomains:
+#  - se.corp.maprtech.com
 
 ## There are some changes specific to the cloud providers
 ## for instance we need to encapsulate packets with some network plugins
