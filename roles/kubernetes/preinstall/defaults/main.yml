@@ -56,6 +56,6 @@ vsphere_public_network: "{{ lookup('env', 'VSPHERE_PUBLIC_NETWORK')|default('') 
 resolveconf_cloud_init_conf: /etc/resolveconf_cloud_init.conf
 
 # All inventory hostnames will be written into each /etc/hosts file.
-populate_inventory_to_hosts_file: true
+populate_inventory_to_hosts_file: false
 
 preinstall_selinux_state: permissive
